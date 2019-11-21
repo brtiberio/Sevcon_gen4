@@ -1,0 +1,338 @@
+----------------------------------------------------------
+Printing EDS file entries
+----------------------------------------------------------
+0x1000: Device type
+0x1001: Error register
+0x1005: Synchronization (SYNC) message COB-ID
+0x1006: Interval between SYNC messages (Communication cycle period)
+0x1008: Product name
+0x1009: Hardware version
+0x100A: Software version
+0x1010: Store command
+0x1011: Restore command
+0x1014: Emergency (EMCY) telegram COB-ID
+0x1016: Consumer heartbeat time
+0x1017: Producer heartbeat time
+0x1018: Identity object
+0x1200: Server SDO 1 (Default) parameters
+0x1201: Server SDO 2 parameters
+0x1202: Server SDO 3 parameters
+0x1203: Server SDO 4 parameters
+0x1280: Client SDO 1 parameters
+0x1281: Client SDO 2 parameters
+0x1282: Client SDO 3 parameters
+0x1283: Client SDO 4 parameters
+0x1284: Client SDO 5 parameters
+0x1285: Client SDO 6 parameters
+0x1286: Client SDO 7 parameters
+0x1287: Client SDO 8 parameters
+0x1400: Receive PDO communication parameters 1
+0x1401: Receive PDO communication parameters 2
+0x1402: Receive PDO communication parameters 3
+0x1403: Receive PDO communication parameters 4
+0x1404: Receive PDO communication parameters 5
+0x1600: Receive PDO mapping parameters 1
+0x1601: Receive PDO mapping parameters 2
+0x1602: Receive PDO mapping parameters 3
+0x1603: Receive PDO mapping parameters 4
+0x1604: Receive PDO mapping parameters 5
+0x1800: Transmit PDO communication parameters 1
+0x1801: Transmit PDO communication parameters 2
+0x1802: Transmit PDO communication parameters 3
+0x1803: Transmit PDO communication parameters 4
+0x1804: Transmit PDO communication parameters 5
+0x1A00: Transmit PDO mapping parameters 1
+0x1A01: Transmit PDO mapping parameters 2
+0x1A02: Transmit PDO mapping parameters 3
+0x1A03: Transmit PDO mapping parameters 4
+0x1A04: Transmit PDO mapping parameters 5
+0x2020: Motor drive left information
+0x2021: Motor drive right information
+0x2040: Motor drive pump information
+0x2060: Motor drive power steer information
+0x2100: Key switch
+0x2101: Horn switch
+0x2120: Drive enable switch
+0x2121: Forward Switch
+0x2122: Reverse Switch
+0x2123: FS1 switch
+0x2124: Seat switch
+0x2125: Handbrake switch
+0x2126: Driveability Select 1 switch
+0x2127: Driveability Select 2 switch
+0x2128: Driveability Select 3 switch
+0x2129: Inch forward switch
+0x212A: Inch reverse switch
+0x212B: Inner left steer switch
+0x212C: Outer left steer switch
+0x212D: Inner right steer switch
+0x212E: Outer right steer switch
+0x212F: High speed switch
+0x2130: Footbrake switch
+0x2131: Regen Charging Enable Switch
+0x2139: Belly
+0x213A: Deadman switch
+0x2140: Pump 1 switch
+0x2141: Pump 2 switch
+0x2142: Pump 3 switch
+0x2143: Pump 4 switch
+0x2144: Pump 5 switch
+0x2145: Pump 6 switch
+0x2146: Pump 7 switch
+0x2150: Pump Inhibit switch
+0x2152: Pump Driveability 1 switch
+0x2153: Pump Driveability 2 switch
+0x2160: Power steer trigger switch
+0x217D: Trip Distance Reset
+0x217F: Slave Left Motor Invert Switch
+0x2220: Throttle Input Voltage
+0x2221: Footbrake Pot Input Voltage
+0x2222: Economy Input Voltage
+0x2223: Steer Pot Input Voltage
+0x2224: Throttle 2 Input Voltage
+0x2240: Pump Throttle 1 Input Voltage
+0x2241: Pump Throttle 2 Input Voltage
+0x2320: Traction Drive Hour-meter output
+0x2400: Line contactor
+0x2401: External LED
+0x2402: Alarm buzzer
+0x2403: Horn
+0x2404: Brake Lights
+0x2405: Service Due
+0x2420: Electro-mechanical brake
+0x2421: Traction Motor Cooling Fan
+0x2422: Motor Isolation Contactor
+0x2423: High / Low Speed Indication
+0x2440: Pump contactor
+0x2460: Power steer contactor
+0x2620: Throttle Value
+0x2621: Footbrake Value
+0x2622: Economy Value
+0x2623: Steer Angle
+0x2624: Steer Angle (in degrees)
+0x2626: Secondary Throttle Value
+0x2640: Pump Throttle 1 Value
+0x2641: Pump Throttle 2 Value
+0x2720: Traction Application Status
+0x2721: Vehicle Speed
+0x2722: User speed 1
+0x2723: User speed 2
+0x2740: Pump Application Status
+0x2760: Power Steer Application Status
+0x2781: Key Hours Counter
+0x2782: Traction Hours Counter
+0x2783: Pump Hours Counter
+0x2784: Power Steer Hours Counter
+0x2785: Work Hours Counter
+0x2786: Charging  Hours Counter
+0x278F: Running indicators
+0x2790: Battery Status
+0x2800: Force system to pre-operational state
+0x2810: Node Indication
+0x2820: Line Contactor Dropout Parameters
+0x2830: Assumed fault severity level for EMCY received from non-sevcon nodes.
+0x2840: Alarm Buzzer Configuration
+0x2850: Servicing
+0x2870: Master Battery Current Limit Parameters
+0x2871: Master Battery Current Limit Status
+0x2872: Battery Current Limit Protection Parameters
+0x2900: Traction control mode (Torque/speed mode (0) or closed loop speed control (1))
+0x2901: Hill hold delay
+0x2902: Seat Switch delay
+0x2903: Electromechanical Brake parameters
+0x2904: High speed parameters
+0x2906: Low Speed Profile Configuration
+0x2907: High/Low Speed Indication Configuration
+0x2908: Drive torque disable speed
+0x2909: Direction change delay
+0x290A: S-Curve Control
+0x290B: Tilt Alarm Delays
+0x290C: Belly operation configuration
+0x290D: Neutral Braking Exit Timer
+0x290E: Brake Feathering
+0x2910: Throttle parameters
+0x2911: Footbrake parameters
+0x2912: Economy parameters
+0x2913: Steering parameters
+0x2914: FS1 Parameters
+0x2915: Motor to vehicle speed ratio
+0x2916: Traction Motor Parameters
+0x2918: Sequence Fault Mask (set bit to ignore input during sequence fault check)
+0x2919: Inching parameters
+0x291A: Traction Fault Clear Mask (set bit to ignore input during traction fault neutral check)
+0x291C: Gearbox oscillation reduction
+0x291E: Speed Limit Configuration
+0x2920: Traction baseline profile
+0x2921: Driveability Select 1 Profile
+0x2922: Driveability Select 2 Profile
+0x2930: Controlled Roll Off parameters
+0x2931: Driveability Select Profile Triggers
+0x2933: Torque demand S-curve
+0x2936: Driveability Select 3 Profile
+0x29A0: Odometer Counter
+0x29A1: Trip Meter Counter
+0x2A00: General Pump Features
+0x2A01: Pump Motor Parameters
+0x2A10: Pump Throttle 1 parameters
+0x2A11: Pump Throttle 2 parameters
+0x2A20: Pump Switch 1 parameters
+0x2A21: Pump Switch 2 parameters
+0x2A22: Pump Switch 3 parameters
+0x2A23: Pump Switch 4 parameters
+0x2A24: Pump Switch 5 parameters
+0x2A25: Pump Switch 6 parameters
+0x2A26: Pump Switch 7 parameters
+0x2A30: Pump Driveability Profile 1 parameters
+0x2A31: Pump Driveability Profile 2 parameters
+0x2B00: General Power steer features
+0x2B01: Power Steer Motor Speed
+0x2B02: Variable Assist Power Steering
+0x2C00: Nominal battery voltage
+0x2C01: Battery over voltage protection
+0x2C02: Battery under voltage protection
+0x2C03: Battery Protection Delay
+0x2C30: BDI parameters
+0x2C31: BDI Remaining Charge Map
+0x2D00: Contactor Output Configuration
+0x2D01: Voltage Control Enable
+0x2D02: Reduce to Hold Level Enable
+0x2E00: Display Configuration
+0x3000: Local Motor VPDO Mapping
+0x3200: Analog output VPDO Mapping
+0x3300: Digital input VPDO Mapping
+0x3400: Analog input VPDO Mapping
+0x4000: Logging Control
+0x4100: System FIFO Control
+0x4101: Select System FIFO item to read in 4102h
+0x4102: System FIFO Output
+0x4110: Faults FIFO Control
+0x4111: Select Faults FIFO item to read in 4112h
+0x4112: Faults FIFO Output
+0x4200: Other Event Log Control
+0x4201: Other Event Counter 1
+0x4202: Other Event Counter 2
+0x4203: Other Event Counter 3
+0x4204: Other Event Counter 4
+0x4205: Other Event Counter 5
+0x4206: Other Event Counter 6
+0x4207: Other Event Counter 7
+0x4208: Other Event Counter 8
+0x4209: Other Event Counter 9
+0x420A: Other Event Counter 10
+0x4300: Operational Monitor - Customer Copy
+0x4301: Operational Monitor - Sevcon Copy
+0x4600: Additional Motor Measurements
+0x4601: Pulsing Hours Counter
+0x4602: AC Motor Debug Information
+0x4603: Additional Motor 2 Measurements
+0x4605: Pulsed encoder debug counters
+0x4611: Motor power limit map
+0x4612: Voltage Torque-Cutback Map
+0x4615: Motor power limit map 2
+0x4617: Programmable User Data
+0x461E: User Definable motor cutback Map
+0x461F: User Definable Thermistor Map
+0x4620: Motor Temperature 1 (Measured - T1)
+0x4621: Motor Temperature Setup
+0x4623: Battery current limit
+0x4624: Motor overspeed protection
+0x4626: Motor Stall Protection Setup
+0x462B: Under voltage lockout reset timer
+0x4630: Encoder Configuration
+0x4641: AC Motor data (manufacturer specific)
+0x4650: Miscellaneous DSP configuration (Gen4)
+0x4651: Speed control Gains
+0x4652: 2nd Power Limit Map (0x4615) trigger
+0x4653: Temporary DSP Configuration (Gen4)
+0x4654: Current sensor autozero range
+0x4658: Active Short configured
+0x4659: Active Short Lower Speed Threshold
+0x4660: Active Short Upper Speed Threshold
+0x4680: General Digital Input Configuration
+0x4681: Digital Input Wire-Off Detection Enable
+0x4690: General Analog Input Configuration
+0x46A1: Analog Output Current / Voltage mode
+0x46A2: Analog Output Auxiliary Frequency
+0x46A3: Analog Output Frequency Selection
+0x46A4: Analog Output as Speed Pulse
+0x46C0: Analogue Input 1 Range
+0x46C1: Analogue Input 2 Range
+0x46C2: Analogue Input 3 Range
+0x46C3: Analogue Input 4 Range
+0x46C4: Analogue Input 5 Range
+0x46D0: Analog input resistances
+0x5000: Password Entry
+0x5001: Password Key
+0x5100: Device Measurements
+0x5110: NMT State
+0x5180: Capacitor Precharge activate
+0x5200: Controller key hours
+0x5300: Node fault information
+0x5310: CANopen General Error Abort Code
+0x5320: Currently active highest priority fault
+0x5400: Bootloader Activate
+0x5500: NVM Format
+0x5501: Internal ROM Checksum
+0x5502: External ROM Checksum
+0x5600: Node domain uploads
+0x5601: Indirect Object Update
+0x5602: Debug object
+0x5603: Host/DSP Memory peek
+0x5604: DSP Trace Object
+0x5605: Timing Analysis
+0x5610: Event information
+0x5620: Configuration Checksum
+0x5621: Range Check Failed Objects
+0x5630: EDS Upload
+0x5631: EDS Upload - Information
+0x5640: Obd Cli interface
+0x5800: Master / Slave configuration
+0x5820: Final precharge level
+0x5821: Minimum precharge level
+0x5824: Maximum line contactor arcing voltage
+0x5830: PWM Configuration
+0x5831: Bridge Control Parameters
+0x5840: Fault Ride-Through Configuration
+0x5900: Physical layer settings
+0x5901: CANbus fault detection on Standalone units
+0x5902: RPDO timeout scheme
+0x5A01: External heat sink fans
+0x6040: controlword
+0x6041: statusword
+0x6060: Mode of operation selection
+0x6061: Operational mode
+0x6069: Encoder count
+0x606B: Velocity demand
+0x606C: Velocity
+0x6071: Target torque
+0x6072: Maximum torque
+0x6074: Torque demand
+0x6075: Current limit
+0x6076: Peak torque
+0x6077: Torque
+0x6078: Current
+0x6079: Capacitor Voltage
+0x6080: Maximum motor speed
+0x6083: Maximum acceleration rate
+0x6086: Motion profile type
+0x6087: Torque slope
+0x6088: Torque profile type
+0x608B: Velocity notation index
+0x608C: Velocity dimension index
+0x608D: Acceleration notation index
+0x608E: Acceleration dimension index
+0x6090: Encoder resolution
+0x6095: Velocity factor 1
+0x6096: Velocity factor 2
+0x60F8: Maximum Motor Slippage
+0x60FF: Target speed
+0x6502: Supported drive modes
+0x67FF: Device type
+0x6800: Digital Input states
+0x6802: Digital Input Polarity (if set, input is active when switch is open (i.e. Normally closed))
+0x6C01: Analog input values.
+0x6C11: Analog output (contactor drive) values.
+0x6C43: Analog output (contactor drive) error modes
+0x6C44: Analog output error value
+0x6FFF: Device Type
+----------------------------------------------------------

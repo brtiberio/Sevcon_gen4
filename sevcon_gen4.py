@@ -677,7 +677,7 @@ def main():
     """
 
     import argparse
-    if (sys.version_info < (3, 0)):
+    if sys.version_info < (3, 0):
         print("Please use python version 3")
         return
 
@@ -776,9 +776,7 @@ def main():
         controlword = controlword.to_bytes(2, 'little')
         inverter.write_object(0x6040, 0, controlword)
         # check led status to see if it is green and blinking
-    #inverter.printPositionControlParameters()
-    #inverter.printMotorConfig()
-    #inverter.printSensorConfig()
+
     inverter.disconnect()
     return
 
